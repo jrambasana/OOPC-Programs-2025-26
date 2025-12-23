@@ -1,4 +1,4 @@
-// Write a C++ program to show Basic Input/Output and Arithmetic Operations.5
+// Write a C++ program to show Basic Input/Output and Arithmetic Operations.
 
 #include <iostream>
 using namespace std;
