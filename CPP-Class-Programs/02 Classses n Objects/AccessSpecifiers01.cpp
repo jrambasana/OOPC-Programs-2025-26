@@ -19,7 +19,7 @@ int main() {
   My_Class my_Obj;
 
   my_Obj.a = 16; 
-//   my_Obj.b = 2002; 
+  // my_Obj.b = 2002; 
   my_Obj.setB(2002);
 
   cout<< "Value of a: " << my_Obj.a << endl;

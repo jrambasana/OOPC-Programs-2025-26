@@ -2,16 +2,25 @@
 using namespace std;
  
 class Box {
+   public:
+      void setLength( double len ) {
+         length = len;
+      }
+      double getLength( void ) {
+         return length ;
+      }
+   private:
+      double length;
    protected:
       double width;
 };
 
-class SmallBox:Box { // SmallBox is the derived class.
+class SmallBox:public Box { // SmallBox is the derived class.
    public:
-   double getSmallWidth(void) {
+   double getSmallBoxWidth(void) {
       return width ;
    }
-   void setSmallWidth( double wid ) {
+   void setSmallBoxWidth( double wid ) {
       width = wid;
    }
 };
@@ -21,10 +30,16 @@ int main() {
    SmallBox box;
  
    // set box width using member function
-   box.setSmallWidth(5.0);
-   cout << "Width of box : "<< box.getSmallWidth() << endl;
+   box.setSmallBoxWidth(5.0);
+   cout << "Width of box : "<< box.getSmallBoxWidth() << endl;
+  
 
+   // box.length = 10.0; // ERROR: length is private
    // box.width = 10;0; // ERROR: width is protected
+
+   // Box b1;
+   box.setLength(6.0);
+   cout << "Length of box : "<< box.getLength() << endl;
  
    return 0;
 }

@@ -5,7 +5,7 @@ using namespace std;
 
 class FactorialCalculator 
 {
-    int n, result;
+    int n=0, result;
     public:
     void setN(int num) {
         n = num;
@@ -13,14 +13,12 @@ class FactorialCalculator
     int getN() {
         return n;
     }
-    int getResult() {
-        return result;
-    }
-    void calculateFactorial() {
+    int giveCalculatedFactorial() {
         result = 1;
         for (int i = 2; i <= n; i++) {
             result *= i;
         }
+        return result;
     }   
 };
 
@@ -32,7 +30,7 @@ int main() {
     cin >> n;
     
     obj1.setN(n);
-    obj1.calculateFactorial();
-    cout << "Factorial of " << obj1.getN() << " is: " << obj1.getResult() << endl;
+    
+    cout << "Factorial of " << obj1.getN() << " is: " << obj1.giveCalculatedFactorial() << endl;
     return 0;
 }

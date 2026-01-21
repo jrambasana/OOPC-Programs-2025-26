@@ -3,9 +3,9 @@
 using namespace std;
  
 class Line {
-   public:
+   private:
       double length;
-  //  public:
+   public:
       void setLength( double len );
       double getLength( void );
 };
@@ -28,8 +28,8 @@ int main() {
    cout << "Length of line : " << line.getLength() <<endl;
  
    // set line length without member function
-   line.length = 10.0; // OK: because length is public
-   cout << "Length of line : " << line.length <<endl;
+   // line.length = 10.0; 
+   // cout << "Length of line : " << line.length <<endl;
    
    return 0;
 }
