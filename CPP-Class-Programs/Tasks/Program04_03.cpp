@@ -35,7 +35,7 @@ public:
     friend void calculateTotalMarks(Internal, External);
 };
 
-friend void calculateTotalMarks(Internal internal, External external) {
+void calculateTotalMarks(Internal internal, External external) {
     int totalMarks[5];
     int sum = 0;
     cout << "Total Marks for each subject:" << endl;
