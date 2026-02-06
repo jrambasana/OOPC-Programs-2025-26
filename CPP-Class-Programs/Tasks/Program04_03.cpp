@@ -38,6 +38,7 @@ public:
 void calculateTotalMarks(Internal internal, External external) {
     int totalMarks[5];
     int sum = 0;
+    float avg=0;
     cout << "Total Marks for each subject:" << endl;
     for (int i = 0; i < 5; i++) {
         totalMarks[i] = internal.internalMarks[i] + external.externalMarks[i];
@@ -46,5 +47,7 @@ void calculateTotalMarks(Internal internal, External external) {
     for (int i = 0; i < 5; i++) {
         sum += totalMarks[i];
     }
+    avg = sum / 500.0;
     cout << "Total Marks of all Subjects : " << sum << endl;
+    cout << "Average Marks of all Subjects : " << avg << endl;
 }

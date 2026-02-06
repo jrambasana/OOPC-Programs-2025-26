@@ -1,1 +1,1 @@
-length
+ cout << "\nAverage Salary = " << totalSalary / n << endl;
