@@ -1,33 +1,67 @@
-// Write a C++ program to show Basic Input/Output and Arithmetic Operations.
-
+// Write a C++ Program to create a BankAccount class with data members and member functions
+// to handle deposit and withdrawal
 #include <iostream>
+#include <string>
 using namespace std;
 
+class BankAccount {
+private:
+    string accountHolderName;
+    double balance;
+    string accountNumber;
+
+public:
+    // Constructor
+    BankAccount(string name, string accNum, double initialBalance = 0.0) {
+        accountHolderName = name;
+        accountNumber = accNum;
+        balance = initialBalance;
+    }
+
+    // Deposit function
+    void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            cout << "Deposited: $" << amount << endl;
+            cout << "New Balance: $" << balance << endl;
+        } else {
+            cout << "Invalid deposit amount!" << endl;
+        }
+    }
+
+    // Withdrawal function
+    void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            cout << "Withdrawn: $" << amount << endl;
+            cout << "New Balance: $" << balance << endl;
+        } else if (amount > balance) {
+            cout << "Insufficient funds!" << endl;
+        } else {
+            cout << "Invalid withdrawal amount!" << endl;
+        }
+    }
+
+    // Display account details
+    void displayBalance() {
+        cout << "Account Holder: " << accountHolderName << endl;
+        cout << "Account Number: " << accountNumber << endl;
+        cout << "Current Balance: $" << balance << endl;
+    }
+};
+
 int main() {
-    // Declare variables
-    int num1, num2;
+    BankAccount account("John Doe", "123456789", 1000.0);
     
-    // Input
-    cout << "Enter first number: ";
-    cin >> num1;
+    account.displayBalance();
+    cout << "\n--- Deposit Operation ---" << endl;
+    account.deposit(500);
     
-    cout << "Enter second number: ";
-    cin >> num2;
+    cout << "\n--- Withdrawal Operation ---" << endl;
+    account.withdraw(300);
     
-    // Arithmetic Operations
-    int sum = num1 + num2;
-    int difference = num1 - num2;
-    int product = num1 * num2;
-    int quotient = num1 / num2;
-    int remainder = num1 % num2;
-    
-    // Output
-    cout << "\n--- Arithmetic Operations ---" << endl;
-    cout << "Addition: " << num1 << " + " << num2 << " = " << sum << endl;
-    cout << "Subtraction: " << num1 << " - " << num2 << " = " << difference << endl;
-    cout << "Multiplication: " << num1 << " * " << num2 << " = " << product << endl;
-    cout << "Division: " << num1 << " / " << num2 << " = " << quotient << endl;
-    cout << "Modulus: " << num1 << " % " << num2 << " = " << remainder << endl;
+    cout << "\n--- Final Balance ---" << endl;
+    account.displayBalance();
     
     return 0;
 }

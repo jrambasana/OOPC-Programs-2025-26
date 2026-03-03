@@ -30,5 +30,8 @@ int main(void) {
    Box b1(3.3, 1.2, 1.5);   // Declare box1
    Box b2(8.5, 6.0, 2.0);    // Declare box2
    cout << "Total objects: " << Box::objectCount << endl;
+   cout << "Volume of b1: " << b1.Volume() << endl;
+   cout << "Volume of b2: " << b2.Volume() << endl;
+   // cout << b1.breadth << endl; // This will cause a compilation error
    return 0;
 }

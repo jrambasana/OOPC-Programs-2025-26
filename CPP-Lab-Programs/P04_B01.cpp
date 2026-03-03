@@ -1,4 +1,5 @@
-// Write a C++ program to demonstrate the friend function concept by creating a class 
+// Write a C++ program to demonstrate the friend function 
+// concept by creating a class 
 
 #include <iostream>
 using namespace std;

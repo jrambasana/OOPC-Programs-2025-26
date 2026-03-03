@@ -1,1 +1,1 @@
-display
+s->area();   // Calls Shape's area (NOT Rectangle)

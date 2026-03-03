@@ -1,1 +1,1 @@
- cout << "\nAverage Salary = " << totalSalary / n << endl;
+   cout << MyClass::ClassCounter << endl;
