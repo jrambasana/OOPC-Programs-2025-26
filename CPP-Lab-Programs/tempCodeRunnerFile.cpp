@@ -1,1 +1,2 @@
-s->area();   // Calls Shape's area (NOT Rectangle)
+
+        cout << "Error deleting file.\n";

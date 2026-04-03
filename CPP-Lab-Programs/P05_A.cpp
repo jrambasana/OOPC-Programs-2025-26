@@ -8,6 +8,9 @@ using namespace std;
 // Base class
 class Shape {
 public:
+    Shape()    {
+        cout << "Shape Constructor Called" << endl;
+    }
     void area() {
         cout << "Area of Shape" << endl;
     }
@@ -19,6 +22,7 @@ class Rectangle : public Shape {
 
 public:
     Rectangle(float l, float b) {
+        cout << "Rectangle Constructor Called" << endl;
         length = l;
         breadth = b;
     }
@@ -26,6 +30,7 @@ public:
     void area() {
         cout << "Area of Rectangle = " << length * breadth << endl;
     }
+
 };
 
 // Derived class Circle
@@ -34,6 +39,7 @@ class Circle : public Shape {
 
 public:
     Circle(float r) {
+        cout << "Circle Constructor Called" << endl;
         radius = r;
     }
 

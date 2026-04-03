@@ -1,3 +1,1 @@
-i.display3();
-    i.display2();
-    i.display1();
+    A(int x) {   cout << "A constructor: "<< x << endl; }

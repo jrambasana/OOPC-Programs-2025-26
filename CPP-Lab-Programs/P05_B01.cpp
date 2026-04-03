@@ -9,13 +9,13 @@ float calculateArea(float side) {
 
 // Area of Rectangle
 // Area of Triangle
-float calculateArea(float base, float height, int choice) 
+float calculateArea(float a, float b, int choice) 
 {
     if (choice == 2) {
-        return base * height; // Rectangle area
+        return a * b; // Rectangle area
     }   
     else if (choice == 3) {
-        return 0.5 * base * height;
+        return 0.5 * a * b; // Triangle area
     }
     else {
         return 0; // Invalid choice
