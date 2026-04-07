@@ -1,2 +1,1 @@
-
-        cout << "Error deleting file.\n";
+"First: " << first << ", Second: " << second << "\n";
